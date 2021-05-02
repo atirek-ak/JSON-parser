@@ -3,7 +3,6 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
 
-<!------ Include the above in your HEAD tag ---------->
 
 <div class="sidenav">
          <div class="login-main-text">
@@ -12,14 +11,6 @@
          </div>
       </div>
       <div class="main">
-		<!-- {% for item in data %} -->
-		<!-- <tr> -->
-			<!-- <td>{{item[0]}}</td> -->
-			<!-- <td>{{item[1]}}</td> -->
-			<!-- <td>{{item[2]}}</td> -->
-			<!-- <td>{{item[3]}}</td> -->
-		<!-- </tr> -->
-		<!-- {% endfor %} -->
 		
 		<ul class="nav justify-content-end">
 			<li class="nav-item">
@@ -40,15 +31,15 @@
             </div>
          </div>
 		 <table class="table">
+			<ul class="nav">
 			<thead>
-			  <tr>
-				<!-- <th scope="col">userId</th> -->
-				<th scope="col">userId</th>
-				<th scope="col">id</th>
-				<th scope="col">title</th>
-				<th scope="col">body</th>
+				<tr>
+				{% for item in headers %}
+				<th scope="col">{{item}}</th>
+				{% endfor %}
 			  </tr>
 			</thead>
+			</ul>
 			{% for item in data %}
 			<tbody>
 				<tr>
@@ -59,25 +50,6 @@
 				</tr>
 			</tbody>
 			{% endfor %}
-			<!-- <tbody> -->
-			  <!-- <tr> -->
-				<!-- <th scope="row">1</th> -->
-				<!-- <td>Mark</td> -->
-				<!-- <td>Otto</td> -->
-				<!-- <td>@mdo</td> -->
-			  <!-- </tr> -->
-			  <!-- <tr> -->
-				<!-- <th scope="row">2</th> -->
-				<!-- <td>Jacob</td> -->
-				<!-- <td>Thornton</td> -->
-				<!-- <td>@fat</td> -->
-			  <!-- </tr> -->
-			  <!-- <tr> -->
-				<!-- <th scope="row">3</th> -->
-				<!-- <td>Larry</td> -->
-				<!-- <td>the Bird</td> -->
-				<!-- <td>@twitter</td> -->
-			  <!-- </tr> -->
-			<!-- </tbody> -->
+			
 		  </table>
       </div>
